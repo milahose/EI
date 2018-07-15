@@ -1,0 +1,26 @@
+{
+	"name": "express-mad-lib-drill",
+	"version": "0.0.1",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"start": "nodemon server.js"
+	},
+	"dependencies": {
+		"body-parser": "^1.18.3",
+		"express": "^4.16.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Thinkful-Ed/express-mad-lib-drill"
+	},
+	"keywords": [
+		"thinkful",
+		"node",
+		"express"
+	],
+	"license": "MIT",
+	"devDependencies": {
+		"nodemon": "^1.18.2"
+	}
+}
