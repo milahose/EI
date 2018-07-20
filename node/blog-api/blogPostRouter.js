@@ -17,7 +17,20 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-	console.log('post end point');
+  console.log('put end point')
+  console.log(res.json(req.body))
+  // const requiredFields = ['title', 'content', 'author', 'publishDate'];
+  // for (let i = 0; i < requiredFields.length; i++) {
+  //   const field = requiredFields[i];
+  //   if (!(field in req.body)) {
+  //     const message = `Missing \`${field}\` in request body`
+  //     console.error(message);
+  //     return res.status(400).send(message);
+  //   }
+  // }
+
+  // const newBlogPost = BlogPosts.create(req.body.title, req.body.content, req.body.author, req.body.publishDate);
+  // res.status(201).json(newBlogPost);
 });
 
 router.put('/:id', (req, res) => {
