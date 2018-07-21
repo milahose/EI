@@ -64,7 +64,9 @@ router.put('/:id', jsonParser, (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-	console.log('delete end point');
+  BlogPosts.delete( req.params.id );
+  console.log( `Deleted recipe \`${req.params.ID}\`` );
+  res.status( 204 ).end();
 });
 
 module.exports = router;
