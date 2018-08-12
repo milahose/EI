@@ -14,8 +14,8 @@ button:hover {
   cursor: pointer;
 }
 
-button:focus {
-  outline: none;
+.hidden {
+  display: none;
 }
 
 #shopping-list-item {
