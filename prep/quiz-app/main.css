@@ -1,0 +1,36 @@
+header,
+section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+nav > p {
+  display: inline-block;
+  margin: 10px; 
+}
+
+nav {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.begin {
+  display: block;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 20px;
+  max-width: 100%;
+}
+fieldset {
+  border: none;
+}
+
+label {
+  display: block;
+}
+
