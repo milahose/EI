@@ -49,3 +49,13 @@ button:hover {
 .shopping-item__checked {
   text-decoration: line-through;
 }
+
+label[for='toggleChecked'] {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type='checkbox'] {
+  width: 14px;
+  height: 14px;
+}
