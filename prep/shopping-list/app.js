@@ -84,7 +84,23 @@ function toggleCheckedItems() {
   });
 }
 
+function filterSearchTerm() {
+  let items = STORE.items;
+  $('#item-search').on('submit', event => event.preventDefault());
+
+  $('#item-search').on('keyup', event => {
+    let searchTerm = $('#search').val();
+
+    STORE.items = items.filter(item => {
+      return item.name.indexOf(searchTerm) >= 0;
+    });
+
+    renderShoppingList();
+  });
+}
+
 function handleShoppingList() {
+  filterSearchTerm();
   renderShoppingList();
   toggleCheckedItems();
   handleNewItemSubmit();

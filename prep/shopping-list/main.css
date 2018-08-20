@@ -6,8 +6,19 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-button, input[type="text"] {
+button, 
+input[type="text"], 
+input[type='search'] {
   padding: 5px;
+}
+
+input[type="text"], 
+input[type='search'] {
+  height: 30px;
+}
+
+button[type="submit"]:focus {
+  outline: none;
 }
 
 button:hover {
@@ -59,3 +70,13 @@ input[type='checkbox'] {
   width: 14px;
   height: 14px;
 }
+
+label[for='search'] {
+  display: block;
+  margin-top: 10px;
+}
+
+/* input[type='search'] {
+  width: 14px;
+  height: 14px;
+} */
