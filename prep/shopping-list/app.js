@@ -3,7 +3,9 @@
 function generateItemElement(item, itemIndex, template) {
   return `
     <li class="js-item-index-element" data-item-index="${itemIndex}">
-      <span class="shopping-item js-shopping-item ${item.checked ? "shopping-item__checked" : ''}">${item.name}</span>
+      <form id="updateItem">
+        <input class="shopping-item js-shopping-item ${item.checked ? "shopping-item__checked" : ''}" value="${item.name}" />
+      </form>
       <div class="shopping-item-controls">
         <button class="shopping-item-toggle js-item-toggle">
             <span class="button-label">check</span>
@@ -36,6 +38,24 @@ function handleNewItemSubmit() {
     $('.js-shopping-list-entry').val('');
     addItemToShoppingList(newItemName);
     renderShoppingList();
+  });
+}
+
+function handleItemEdit() {
+  let selectedItem;
+  $('.js-shopping-list').on('click', '.js-shopping-item', event => {
+    selectedItem = $(event.currentTarget).val();
+  });
+
+  $('.js-shopping-list').on('submit', '#updateItem', event => {
+    event.preventDefault();
+    $('.js-shopping-item').blur()
+
+    STORE.items.forEach(item => {
+      if (item.name === selectedItem) {
+        item.name = $('.js-shopping-item').val();
+      }
+    });
   });
 }
 
@@ -100,6 +120,7 @@ function filterSearchTerm() {
 }
 
 function handleShoppingList() {
+  handleItemEdit();
   filterSearchTerm();
   renderShoppingList();
   toggleCheckedItems();
