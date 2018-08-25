@@ -33,6 +33,14 @@ button:hover {
   width: 250px;
 }
 
+.js-shopping-item {
+  border: none;
+}
+
+.js-shopping-item:focus {
+  outline: none;
+}
+
 .container {
   max-width: 600px;
   margin: 0 auto;
